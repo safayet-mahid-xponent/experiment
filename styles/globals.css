@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -23,4 +27,51 @@ a {
     color: white;
     background: black;
   }
+}
+
+:root {
+  --amplify-primary-bg: #057c097e;
+  --amplify-secondary-bg: #057c096e;
+  --amplify-tab-hover-bg: #057c0925;
+  --amplify-tab-color: #057c09b2;
+}
+
+/* button  */
+[data-amplify-authenticator] .amplify-button[data-variation="primary"] {
+  background-color: var(--amplify-primary-bg);
+}
+[data-amplify-authenticator] .amplify-button[data-variation="link"] {
+  color: var(--amplify-primary-bg);
+}
+[data-amplify-authenticator] .amplify-button:hover {
+  background-color: var(--amplify-secondary-bg);
+}
+[data-amplify-authenticator] .amplify-button[data-variation="link"]:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* tab   */
+[data-amplify-authenticator] .amplify-tabs-item:hover {
+  background-color: var(--amplify-tab-hover-bg);
+  border-color: var(--amplify-tab-color);
+  color: var(--amplify-tab-color);
+}
+
+[data-amplify-authenticator] .amplify-tabs-item {
+  color: var(--amplify-tab-color);
+}
+[data-amplify-authenticator] .amplify-tabs-item[data-state="active"] {
+  border-color: var(--amplify-tab-color);
+  color: white;
+  background-color: var(--amplify-primary-bg);
+}
+
+/* authenticator (login) component  */
+[data-amplify-authenticator] {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
