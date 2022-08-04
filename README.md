@@ -1,1 +1,1 @@
-cosmops 
+cosmos
